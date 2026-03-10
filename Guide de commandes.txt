@@ -1,1 +1,7 @@
 lancer le serv : .\venv\Scripts\python manage.py runserver
+arreter le serv : crtl + c 
+
+nom du super indentifiant : pablo
+mail super user : pacantini16@gmail.com
+mdp super user : nael2006
+
