@@ -1,5 +1,12 @@
 lancer le serv : .\venv\Scripts\python manage.py runserver
 arreter le serv : crtl + c 
+preparer maj de base de données : .\venv\Scripts\python manage.py makemigrations
+appliqer la maj de base de données : .\venv\Scripts\python manage.py migrate
+
+lien vers site : 
+- interfcae admin : http://127.0.0.1:8000/admin/
+- site de base : http://127.0.0.1:8000/
+
 
 nom du super indentifiant : pablo
 mail super user : pacantini16@gmail.com
