@@ -1,2 +1,2 @@
 # cafeteria-django
-Site pour la caffeteria crée par neal et pablo
+Architecture du site + base de donné pour projet de caffeteria
