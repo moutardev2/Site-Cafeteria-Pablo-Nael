@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}Confirmation de suppression - Cafétéria{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-lg-6">
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-danger">Attention : Suppression définitive</h6>
+            </div>
+            <div class="card-body">
+                <div class="text-center mb-4">
+                    <i class="fas fa-exclamation-triangle fa-3x text-warning mb-3"></i>
+                    <p class="lead">Êtes-vous sûr de vouloir supprimer cet élément ?</p>
+                    <p class="text-gray-800 font-weight-bold">"{{ product.name }}"</p>
+                </div>
+                
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="d-flex justify-content-center gap-3 mt-4">
+                        <button type="submit" class="btn btn-danger btn-icon-split shadow-sm">
+                            <span class="icon text-white-50">
+                                <i class="fas fa-trash"></i>
+                            </span>
+                            <span class="text">Confirmer la suppression</span>
+                        </button>
+                        <a href="{% url 'product_manage_list' %}" class="btn btn-secondary btn-icon-split shadow-sm ml-2">
+                            <span class="icon text-white-50">
+                                <i class="fas fa-times"></i>
+                            </span>
+                            <span class="text">Annuler</span>
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

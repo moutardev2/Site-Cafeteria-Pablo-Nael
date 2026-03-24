@@ -6,8 +6,9 @@ appliqer la maj de base de données : .\venv\Scripts\python manage.py migrate
 lien vers site : 
 - interfcae admin : http://127.0.0.1:8000/admin/
 - site de base : http://127.0.0.1:8000/
-
-
+- site de la liste : http://127.0.0.1:8000/admin/ 
+- page etudiant : http://127.0.0.1:8000/students/
+- page ajout étudiant : http://127.0.0.1:8000/students/add/
 nom du super indentifiant : pablo
 mail super user : pacantini16@gmail.com
 mdp super user : nael2006

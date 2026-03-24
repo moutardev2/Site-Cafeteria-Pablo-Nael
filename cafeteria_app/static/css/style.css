@@ -1,0 +1,147 @@
+body {
+    background-color: #1f2630;
+    color: #dbe3ee;
+    font-family: "Segoe UI", "Inter", "Roboto", Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+}
+
+:root {
+    --bs-body-color: #dbe3ee;
+    --bs-secondary-color: #b9c7d8;
+    --bs-tertiary-color: #9aaac0;
+    --bs-border-color: #3c495c;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #f2f6fb;
+    font-weight: 700;
+    letter-spacing: 0.015em;
+}
+
+p,
+td,
+th,
+label,
+.nav-link,
+.btn,
+.form-control,
+.form-select {
+    font-weight: 500;
+}
+
+a {
+    color: #9ec5fe;
+}
+
+a:hover {
+    color: #c5dcff;
+}
+
+.text-muted,
+.text-body-secondary,
+small,
+.form-text {
+    color: #b9c7d8 !important;
+}
+
+.navbar-brand img {
+    height: 50px;
+    width: 50px;
+}
+
+.page-card {
+    border: 1px solid #354152;
+    border-radius: 0.75rem;
+    background-color: #2a3340;
+    box-shadow: 0 0.75rem 1.8rem rgba(0, 0, 0, 0.35);
+}
+
+.card,
+.card-body {
+    color: #e6edf7;
+}
+
+.table thead th {
+    white-space: nowrap;
+}
+
+.table {
+    --bs-table-bg: transparent;
+    --bs-table-color: #dbe3ee;
+    --bs-table-border-color: #3c495c;
+    --bs-table-hover-bg: #344154;
+    --bs-table-hover-color: #ffffff;
+}
+
+.table-light {
+    --bs-table-bg: #344154;
+    --bs-table-color: #e9eff6;
+}
+
+.form-control,
+.form-select {
+    background-color: #25303d;
+    color: #dbe3ee;
+    border-color: #3c495c;
+}
+
+.form-control::placeholder {
+    color: #9fb0c6;
+}
+
+.form-control:focus,
+.form-select:focus {
+    background-color: #25303d;
+    color: #dbe3ee;
+    border-color: #6ea8fe;
+    box-shadow: 0 0 0 0.2rem rgba(110, 168, 254, 0.2);
+}
+
+.text-danger {
+    color: #ff8a97 !important;
+}
+
+.btn-outline-secondary {
+    color: #d3deec;
+    border-color: #70829d;
+}
+
+.btn-outline-secondary:hover,
+.btn-outline-secondary:focus {
+    color: #ffffff;
+    background-color: #5b6f8a;
+    border-color: #5b6f8a;
+}
+
+.btn-outline-danger {
+    color: #ffadb6;
+    border-color: #ff8a97;
+}
+
+.btn-outline-danger:hover,
+.btn-outline-danger:focus {
+    color: #ffffff;
+    background-color: #ff8a97;
+    border-color: #ff8a97;
+}
+
+.border-top {
+    border-top-color: #3c495c !important;
+}
+
+.bg-white {
+    background-color: #25303d !important;
+}
+
+.footer-note {
+    font-size: 0.9rem;
+    color: #a9b6c8;
+}

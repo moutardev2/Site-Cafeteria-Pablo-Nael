@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+{% block title %}Gestion Stocks - Cafétéria{% endblock %}
+
+{% block content %}
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Gestion des Stocks & Produits</h1>
+    <a href="{% url 'product_add' %}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+        <i class="fas fa-plus-circle fa-sm text-white-50"></i> Ajouter un Produit
+    </a>
+</div>
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Inventaire Complet</h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered text-gray-800" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Prix</th>
+                        <th>Stock Actuel</th>
+                        <th>État</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for product in products %}
+                    <tr>
+                        <td>
+                            {% if product.image %}
+                                <img src="{{ product.image.url }}" alt="{{ product.name }}" style="width: 50px; height: 50px; object-fit: cover; border-radius: 5px;" class="shadow-sm mr-2">
+                            {% else %}
+                                <div class="bg-gray-200 d-inline-block text-center rounded mr-2" style="width: 50px; height: 50px; line-height: 50px;">
+                                    <i class="fas fa-image text-gray-400"></i>
+                                </div>
+                            {% endif %}
+                            <span class="font-weight-bold">{{ product.name }}</span>
+                        </td>
+                        <td>{{ product.price }} €</td>
+                        <td>
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-auto mr-2">
+                                    <div class="h6 mb-0 font-weight-bold">{{ product.stock }}</div>
+                                </div>
+                                <div class="col">
+                                    <div class="progress progress-sm mr-2">
+                                        <div class="progress-bar {% if product.stock < 10 %}bg-danger{% else %}bg-info{% endif %}" 
+                                             role="progressbar" style="width: {{ product.stock }}%" 
+                                             aria-valuenow="{{ product.stock }}" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            {% if product.available %}
+                                <span class="badge badge-success"><i class="fas fa-check"></i> En Vente</span>
+                            {% else %}
+                                <span class="badge badge-danger"><i class="fas fa-times"></i> Masqué</span>
+                            {% endif %}
+                        </td>
+                        <td>
+                            <a href="{% url 'product_edit' product.pk %}" class="btn btn-info btn-circle btn-sm shadow-sm">
+                                <i class="fas fa-edit"></i>
+                            </a>
+                            <a href="{% url 'product_delete' product.pk %}" class="btn btn-danger btn-circle btn-sm shadow-sm">
+                                <i class="fas fa-trash"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    {% empty %}
+                    <tr>
+                        <td colspan="5" class="text-center">Aucun produit en stock.</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

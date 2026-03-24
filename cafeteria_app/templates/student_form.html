@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-12 col-md-8 col-lg-6">
+        <div class="card page-card">
+            <div class="card-body p-4">
+                <h1 class="h4 mb-3">{{ title }}</h1>
+
+                <form method="post" novalidate>
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <div class="d-flex gap-2 mt-3">
+                        <button type="submit" class="btn btn-primary">Enregistrer</button>
+                        <a href="{% url 'student_list' %}" class="btn btn-outline-secondary">Annuler</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

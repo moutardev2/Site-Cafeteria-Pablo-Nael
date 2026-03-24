@@ -16,9 +16,43 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from cafeteria_app.views import product_list
+from cafeteria_app.views import (
+    home,
+    product_add,
+    product_delete,
+    product_edit,
+    product_list,
+    product_manage_list,
+    student_add,
+    student_delete,
+    student_edit,
+    student_list,
+    transaction_add,
+    transaction_delete,
+    transaction_edit,
+    transaction_list,
+)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', home, name='home'),
     path('products/', product_list, name='product_list'),
+    path('products/manage/', product_manage_list, name='product_manage_list'),
+    path('products/add/', product_add, name='product_add'),
+    path('products/<int:pk>/edit/', product_edit, name='product_edit'),
+    path('products/<int:pk>/delete/', product_delete, name='product_delete'),
+    path('students/', student_list, name='student_list'),
+    path('students/add/', student_add, name='student_add'),
+    path('students/<int:pk>/edit/', student_edit, name='student_edit'),
+    path('students/<int:pk>/delete/', student_delete, name='student_delete'),
+    path('transactions/', transaction_list, name='transaction_list'),
+    path('transactions/add/', transaction_add, name='transaction_add'),
+    path('transactions/<int:pk>/edit/', transaction_edit, name='transaction_edit'),
+    path('transactions/<int:pk>/delete/', transaction_delete, name='transaction_delete'),
 ]
+
+from django.conf import settings
+from django.conf.urls.static import static
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

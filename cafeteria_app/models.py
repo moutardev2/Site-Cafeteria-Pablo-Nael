@@ -23,6 +23,7 @@ class Product(models.Model):
     price = models.FloatField()
     stock = models.IntegerField(default=0)
     available = models.BooleanField(default=True)
+    image = models.ImageField(upload_to='products/', blank=True, null=True)
 
     def __str__(self):
         return f"{self.name} ({self.price}€)"
@@ -30,6 +31,7 @@ class Product(models.Model):
 class Transaction(models.Model):
     # C'est la Clé Étrangère : le lien qui pointe vers l'ID de l'élève
     student = models.ForeignKey(Student, on_delete=models.SET_NULL, null=True)
+    product = models.ForeignKey(Product, on_delete=models.SET_NULL, null=True, blank=True)
     date = models.DateTimeField(auto_now_add=True) # Date du jour automatique
     amount = models.FloatField()
 

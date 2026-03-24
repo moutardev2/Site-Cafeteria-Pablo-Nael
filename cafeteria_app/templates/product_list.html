@@ -1,28 +1,45 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Liste des Produits</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-    <div class="container mt-5">
-        <h1>Produits Disponibles</h1>
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>Nom</th>
-                    <th>Prix</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for product in products %}
-                <tr>
-                    <td>{{ product.name }}</td>
-                    <td>{{ product.price }} €</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+{% extends 'base.html' %}
+
+{% block title %}Menu - Cafétéria{% endblock %}
+
+{% block content %}
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Menu de la Cafétéria</h1>
+</div>
+
+<div class="row">
+    {% for product in products %}
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-primary shadow h-100 py-2">
+            {% if product.image %}
+                <img src="{{ product.image.url }}" class="card-img-top p-2" alt="{{ product.name }}" style="height: 150px; object-fit: contain;">
+            {% endif %}
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                            {{ product.name }}</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">{{ product.price }} €</div>
+                        <div class="mt-2">
+                            {% if product.available %}
+                                <span class="badge badge-success">Disponible</span>
+                            {% else %}
+                                <span class="badge badge-danger">Rupture</span>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-utensils fa-2x text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</body>
-</html>
+    {% empty %}
+    <div class="col-12 text-center py-5">
+        <p class="text-muted">Le menu est vide pour le moment.</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
+
