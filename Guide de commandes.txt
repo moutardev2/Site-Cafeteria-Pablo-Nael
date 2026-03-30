@@ -2,6 +2,7 @@ lancer le serv : .\venv\Scripts\python manage.py runserver
 arreter le serv : crtl + c 
 preparer maj de base de données : .\venv\Scripts\python manage.py makemigrations
 appliqer la maj de base de données : .\venv\Scripts\python manage.py migrate
+maj plugin CAS (si table manquante) : .\venv\Scripts\python manage.py migrate django_cas_ng
 
 lien vers site : 
 - interfcae admin : http://127.0.0.1:8000/admin/

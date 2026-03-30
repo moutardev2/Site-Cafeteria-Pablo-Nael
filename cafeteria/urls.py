@@ -16,6 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django_cas_ng import views as cas_views
 from cafeteria_app.views import (
     home,
     product_add,
@@ -35,6 +36,8 @@ from cafeteria_app.views import (
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('accounts/login/', cas_views.LoginView.as_view(), name='cas_ng_login'),
+    path('accounts/logout/', cas_views.LogoutView.as_view(), name='cas_ng_logout'),
     path('', home, name='home'),
     path('products/', product_list, name='product_list'),
     path('products/manage/', product_manage_list, name='product_manage_list'),

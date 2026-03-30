@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_cas_ng',
     'cafeteria_app',
 ]
 
@@ -68,6 +69,19 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'cafeteria.wsgi.application'
+
+AUTHENTICATION_BACKENDS = [
+    'django_cas_ng.backends.CASBackend',
+    'django.contrib.auth.backends.ModelBackend',
+]
+
+CAS_SERVER_URL = 'https://identites.ensea.fr/cas/'
+CAS_LOGIN_URL_NAME = 'cas_ng_login'
+CAS_LOGOUT_URL_NAME = 'cas_ng_logout'
+
+LOGIN_URL = 'cas_ng_login'
+LOGIN_REDIRECT_URL = 'product_list'
+LOGOUT_REDIRECT_URL = 'cas_ng_login'
 
 
 # Database

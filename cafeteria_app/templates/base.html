@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    {% load static %}
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -45,7 +46,6 @@
 
         <!-- Sidebar -->
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-            {% load static %}
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{% url 'home' %}">
                 <div class="sidebar-brand-icon">
@@ -100,6 +100,24 @@
                         <i class="fa fa-bars"></i>
                     </button>
                     <h1 class="h3 mb-0 text-gray-800">Système de Gestion Cafétéria</h1>
+                    <ul class="navbar-nav ml-auto align-items-center">
+                        {% if user.is_authenticated %}
+                            <li class="nav-item mr-3 text-gray-700 small">
+                                Connecté : {{ user.username }}
+                            </li>
+                            <li class="nav-item">
+                                <a class="btn btn-sm btn-outline-danger" href="{% url 'cas_ng_logout' %}">
+                                    <i class="fas fa-sign-out-alt"></i> Déconnexion
+                                </a>
+                            </li>
+                        {% else %}
+                            <li class="nav-item">
+                                <a class="btn btn-sm btn-outline-primary" href="{% url 'cas_ng_login' %}">
+                                    <i class="fas fa-sign-in-alt"></i> Connexion CAS
+                                </a>
+                            </li>
+                        {% endif %}
+                    </ul>
                 </nav>
                 <!-- End of Topbar -->
 
