@@ -1,3 +1,4 @@
+<p align="center">
 # TP Django — Gestion de la cafétéria
 
 <p align="center">
