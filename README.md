@@ -1,5 +1,5 @@
 <p align="center">
-### TP Django — Gestion de la cafétéria
+<h1>TP Django — Gestion de la cafétéria</h1>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Django-MVT-0C4B33?style=for-the-badge&logo=django&logoColor=white" alt="Django">
