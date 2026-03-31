@@ -1,4 +1,4 @@
-# ☕ TP Django — Gestion de la cafétéria
+# TP Django — Gestion de la cafétéria
 
 <p align="center">
   <img src="https://img.shields.io/badge/Django-MVT-0C4B33?style=for-the-badge&logo=django&logoColor=white" alt="Django">
@@ -17,12 +17,12 @@
 
 ## 👥 Binôme
 
-- **Étudiant 1** : ***
+- **Étudiant 1** : **Naël**
 - **Étudiant 2** : **Pablo**
 
 ---
 
-## 🧾 Sommaire
+## Sommaire
 
 - [1. Contexte du projet](#1-contexte-du-projet)
 - [2. Objectifs pédagogiques](#2-objectifs-pédagogiques)
