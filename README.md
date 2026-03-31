@@ -15,7 +15,7 @@
 
 ---
 
-## 👥 Binôme
+## Binôme
 
 - **Étudiant 1** : **Naël**
 - **Étudiant 2** : **Pablo**
