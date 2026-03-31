@@ -177,7 +177,7 @@ cafeteria-django/
 ├── manage.py
 ├── README.md
 └── .gitignore
-
+```
 ## 9. Modélisation avec Django
 
 ### 9.1 Traduction du diagramme en modèles Django
