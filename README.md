@@ -15,13 +15,6 @@
 
 ---
 
-## Binôme
-
-- **Étudiant 1** : **Naël**
-- **Étudiant 2** : **Pablo**
-
----
-
 ## Sommaire
 
 - [1. Contexte du projet](#1-contexte-du-projet)
