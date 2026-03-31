@@ -25,26 +25,22 @@
 ## Sommaire
 
 - [1. Contexte du projet](#1-contexte-du-projet)
-- [2. Objectifs pédagogiques](#2-objectifs-pédagogiques)
 - [3. Organisation du travail en binôme](#3-organisation-du-travail-en-binôme)
 - [4. Choix techniques globaux](#4-choix-techniques-globaux)
 - [5. Mise en place de l’environnement](#5-mise-en-place-de-lenvironnement)
 - [6. Versionnement et GitHub](#6-versionnement-et-github)
 - [7. Architecture du projet Django](#7-architecture-du-projet-django)
-- [8. Réflexion sur la base de données](#8-réflexion-sur-la-base-de-données)
 - [9. Modélisation avec Django](#9-modélisation-avec-django)
 - [10. Interface d’administration](#10-interface-dadministration)
 - [11. Architecture MVT](#11-architecture-mvt)
 - [12. Gestion des vues et des URLs](#12-gestion-des-vues-et-des-urls)
 - [13. Templates et intégration des données](#13-templates-et-intégration-des-données)
 - [14. CRUD et gestion des formulaires](#14-crud-et-gestion-des-formulaires)
-- [15. Différence entre GET et POST](#15-différence-entre-get-et-post)
 - [16. Mise en forme et choix visuels](#16-mise-en-forme-et-choix-visuels)
 - [17. Gestion des fichiers statiques](#17-gestion-des-fichiers-statiques)
 - [18. Authentification et plugins Django](#18-authentification-et-plugins-django)
 - [19. Réseau : IP, LAN, localhost](#19-réseau--ip-lan-localhost)
 - [20. Difficultés rencontrées](#20-difficultés-rencontrées)
-- [21. Ce que nous avons appris](#21-ce-que-nous-avons-appris)
 - [22. Conclusion](#22-conclusion)
 
 ---
@@ -178,33 +174,33 @@ cafeteria-django/
 ├── README.md
 └── .gitignore
 ```
-## 9. Modélisation avec Django
+## 8. Modélisation avec Django
 
-### 9.1 Traduction du diagramme en modèles Django
-
-***
-
-### 9.2 Modèle `Student`
+### 8.1 Traduction du diagramme en modèles Django
 
 ***
 
-### 9.3 Modèle `Product`
+### 8.2 Modèle `Student`
 
 ***
 
-### 9.4 Modèle `Transaction`
+### 8.3 Modèle `Product`
 
 ***
 
-### 9.5 Pourquoi nous avons choisi ces champs
+### 8.4 Modèle `Transaction`
 
 ***
 
-### 9.6 Pourquoi nous avons ajouté certaines contraintes ou valeurs par défaut
+### 8.5 Pourquoi nous avons choisi ces champs
 
 ***
 
-### 9.7 Extrait de `models.py`
+### 8.6 Pourquoi nous avons ajouté certaines contraintes ou valeurs par défaut
+
+***
+
+### 8.7 Extrait de `models.py`
 
 ***
 
@@ -223,21 +219,21 @@ class Transaction(models.Model):
 
 ---
 
-## 10. Interface d’administration
+## 9. Interface d’administration
 
-### 10.1 Mise en place de l’admin Django
-
-***
-
-### 10.2 Enregistrement des modèles
+### 9.1 Mise en place de l’admin Django
 
 ***
 
-### 10.3 Utilité de l’interface admin dans notre projet
+### 9.2 Enregistrement des modèles
 
 ***
 
-### 10.4 Pourquoi nous avons utilisé l’admin pour les premiers tests
+### 9.3 Utilité de l’interface admin dans notre projet
+
+***
+
+### 9.4 Pourquoi nous avons utilisé l’admin pour les premiers tests
 
 ***
 
@@ -252,53 +248,53 @@ admin.site.register(Transaction)
 
 ---
 
-## 11. Architecture MVT
+## 10. Architecture MVT
 
-### 11.1 Compréhension du pattern MVT
-
-***
-
-### 11.2 Rôle du Model
+### 10.1 Compréhension du pattern MVT
 
 ***
 
-### 11.3 Rôle de la View
+### 10.2 Rôle du Model
 
 ***
 
-### 11.4 Rôle du Template
+### 10.3 Rôle de la View
 
 ***
 
-### 11.5 Pourquoi cette architecture nous a aidés à mieux organiser le projet
+### 10.4 Rôle du Template
+
+***
+
+### 10.5 Pourquoi cette architecture nous a aidés à mieux organiser le projet
 
 ***
 
 ---
 
-## 12. Gestion des vues et des URLs
+## 11. Gestion des vues et des URLs
 
-### 12.1 Première vue réalisée
-
-***
-
-### 12.2 Liste des produits disponibles
+### 11.1 Première vue réalisée
 
 ***
 
-### 12.3 Configuration des routes
+### 11.2 Liste des produits disponibles
 
 ***
 
-### 12.4 Pourquoi nous avons choisi cette logique de navigation
+### 11.3 Configuration des routes
 
 ***
 
-### 12.5 Pourquoi nous avons nommé les URLs de cette manière
+### 11.4 Pourquoi nous avons choisi cette logique de navigation
 
 ***
 
-~~~python
+### 11.5 Pourquoi nous avons nommé les URLs de cette manière
+
+***
+
+~~~pyhon
 from django.urls import path
 from cafeteria_app import views
 
@@ -310,29 +306,29 @@ urlpatterns = [
 
 ---
 
-## 13. Templates et intégration des données
+## 12. Templates et intégration des données
 
-### 13.1 Principe des templates Django
-
-***
-
-### 13.2 Passage des données depuis la view
+### 12.1 Principe des templates Django
 
 ***
 
-### 13.3 Affichage dynamique avec les balises Django
+### 12.2 Passage des données depuis la view
 
 ***
 
-### 13.4 Utilisation des boucles, conditions et variables
+### 12.3 Affichage dynamique avec les balises Django
 
 ***
 
-### 13.5 Pourquoi nous avons utilisé un template de base `base.html`
+### 12.4 Utilisation des boucles, conditions et variables
 
 ***
 
-### 13.6 Pourquoi cette structure rend le projet plus maintenable
+### 12.5 Pourquoi nous avons utilisé un template de base `base.html`
+
+***
+
+### 12.6 Pourquoi cette structure rend le projet plus maintenable
 
 ***
 
@@ -346,37 +342,37 @@ urlpatterns = [
 
 ---
 
-## 14. CRUD et gestion des formulaires
+## 13. CRUD et gestion des formulaires
 
-### 14.1 Mise en place des opérations CRUD
-
-***
-
-### 14.2 Ajout d’un étudiant
+### 13.1 Mise en place des opérations CRUD
 
 ***
 
-### 14.3 Modification d’un étudiant
+### 13.2 Ajout d’un étudiant
 
 ***
 
-### 14.4 Suppression d’un étudiant
+### 13.3 Modification d’un étudiant
 
 ***
 
-### 14.5 Gestion des produits et transactions
+### 13.4 Suppression d’un étudiant
 
 ***
 
-### 14.6 Utilisation de `ModelForm`
+### 13.5 Gestion des produits et transactions
 
 ***
 
-### 14.7 Pourquoi nous avons utilisé `ModelForm` plutôt qu’un formulaire HTML manuel
+### 13.6 Utilisation de `ModelForm`
 
 ***
 
-### 14.8 Exemple de structure
+### 13.7 Pourquoi nous avons utilisé `ModelForm` plutôt qu’un formulaire HTML manuel
+
+***
+
+### 13.8 Exemple de structure
 
 ***
 
@@ -392,77 +388,57 @@ class StudentForm(forms.ModelForm):
 
 ---
 
-## 15. Différence entre GET et POST
+## 14. Mise en forme et choix visuels
 
-### 15.1 Requêtes GET
-
-***
-
-### 15.2 Requêtes POST
+### 14.1 Choix du style général
 
 ***
 
-### 15.3 Utilisation concrète dans notre application
+### 14.2 Intégration de Bootstrap
 
 ***
 
-### 15.4 Pourquoi il était important de distinguer ces deux méthodes
+### 14.3 Organisation de l’interface
 
 ***
 
----
-
-## 16. Mise en forme et choix visuels
-
-### 16.1 Choix du style général
+### 14.4 Lisibilité et expérience utilisateur
 
 ***
 
-### 16.2 Intégration de Bootstrap
+### 14.5 Responsive design
 
 ***
 
-### 16.3 Organisation de l’interface
+### 14.6 Pourquoi nous avons fait cette mise en forme
 
 ***
 
-### 16.4 Lisibilité et expérience utilisateur
-
-***
-
-### 16.5 Responsive design
-
-***
-
-### 16.6 Pourquoi nous avons fait cette mise en forme
-
-***
-
-### 16.7 Pourquoi nous avons privilégié la clarté plutôt que la complexité visuelle
+### 14.7 Pourquoi nous avons privilégié la clarté plutôt que la complexité visuelle
 
 ***
 
 ---
 
-## 17. Gestion des fichiers statiques
+## 15. Gestion des fichiers statiques
 
-### 17.1 Organisation des fichiers CSS, JS et images
-
-***
-
-### 17.2 Utilisation du dossier `static/`
+### 15.1 Organisation des fichiers CSS, JS et images
 
 ***
 
-### 17.3 Ajout éventuel d’images et d’un logo
+### 15.2 Utilisation du dossier `static/`
 
 ***
 
-### 17.4 Pourquoi nous avons séparé les fichiers statiques du reste du projet
+### 15.3 Ajout éventuel d’images et d’un logo
 
 ***
 
-### 17.5 Pourquoi cette organisation est importante en développement et en production
+### 15.4 Pourquoi nous avons séparé les fichiers statiques du reste du projet
+
+***
+
+### 15.5 Pourquoi cette organisation est importante en développement et en production
 
 ***
 
@@ -474,123 +450,99 @@ class StudentForm(forms.ModelForm):
 
 ---
 
-## 18. Authentification et plugins Django
+## 16. Authentification et plugins Django
 
-### 18.1 Système d’authentification Django
-
-***
-
-### 18.2 Protection des vues
+### 16.1 Système d’authentification Django
 
 ***
 
-### 18.3 Intégration possible du CAS ENSEA
+### 16.2 Protection des vues
 
 ***
 
-### 18.4 Plugin `django-cas-ng`
+### 16.3 Intégration possible du CAS ENSEA
 
 ***
 
-### 18.5 Plugin `django-import-export`
+### 16.4 Plugin `django-cas-ng`
 
 ***
 
-### 18.6 Pourquoi ces plugins sont pertinents dans le cadre du projet
+### 16.5 Plugin `django-import-export`
 
 ***
 
-### 18.7 Pourquoi nous avons choisi de rester cohérents avec les consignes du TP
+### 16.6 Pourquoi ces plugins sont pertinents dans le cadre du projet
 
 ***
 
----
-
-## 19. Réseau : IP, LAN, localhost
-
-### 19.1 Compréhension de `localhost`
-
-***
-
-### 19.2 Adresse `127.0.0.1`
-
-***
-
-### 19.3 Notion de LAN
-
-***
-
-### 19.4 Accès local vs accès réseau
-
-***
-
-### 19.5 Pourquoi ces notions sont importantes pour un projet web Django
+### 16.7 Pourquoi nous avons choisi de rester cohérents avec les consignes du TP
 
 ***
 
 ---
 
-## 20. Difficultés rencontrées
+## 17. Réseau : IP, LAN, localhost
 
-### 20.1 Problèmes techniques rencontrés
-
-***
-
-### 20.2 Difficultés de compréhension
+### 17.1 Compréhension de `localhost`
 
 ***
 
-### 20.3 Solutions apportées
+### 17.2 Adresse `127.0.0.1`
 
 ***
 
-### 20.4 Ce que nous aurions pu améliorer
+### 17.3 Notion de LAN
 
 ***
 
----
-
-## 21. Ce que nous avons appris
-
-### 21.1 Apports sur Django
+### 17.4 Accès local vs accès réseau
 
 ***
 
-### 21.2 Apports sur Git et GitHub
-
-***
-
-### 21.3 Apports sur l’organisation du code
-
-***
-
-### 21.4 Apports sur le travail en binôme
-
-***
-
-### 21.5 Apports sur la logique de développement web
+### 17.5 Pourquoi ces notions sont importantes pour un projet web Django
 
 ***
 
 ---
 
-## 22. Conclusion
+## 18. Difficultés rencontrées
 
-### 22.1 Bilan général
-
-***
-
-### 22.2 Ce que ce projet nous a apporté
+### 18.1 Problèmes techniques rencontrés
 
 ***
 
-### 22.3 Perspectives d’amélioration
+### 18.2 Difficultés de compréhension
+
+***
+
+### 18.3 Solutions apportées
+
+***
+
+### 18.4 Ce que nous aurions pu améliorer
 
 ***
 
 ---
 
-## 📎 Annexes
+## 19. Conclusion
+
+### 19.1 Bilan général
+
+***
+
+### 19.2 Ce que ce projet nous a apporté
+
+***
+
+### 19.3 Perspectives d’amélioration
+
+***
+
+---
+
+##  Annexes
 
 ### A. Commandes utiles
 
