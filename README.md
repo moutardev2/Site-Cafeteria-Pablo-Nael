@@ -560,6 +560,7 @@ git push
 ## Réponses aux questions du sujet
 
 > ### 1. Quels sont les avantages d'utiliser `ModelForm` par rapport à un formulaire HTML manuel ?
+## Parce que d
 
 ***
 
