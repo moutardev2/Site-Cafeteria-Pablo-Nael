@@ -559,27 +559,27 @@ git push
 
 ## Réponses aux questions du sujet
 
-### 1. Quels sont les avantages d'utiliser `ModelForm` par rapport à un formulaire HTML manuel ?
+> ### 1. Quels sont les avantages d'utiliser `ModelForm` par rapport à un formulaire HTML manuel ?
 
 ***
 
-### 2. Comment Django valide-t-il les données côté serveur ?
+> ### 2. Comment Django valide-t-il les données côté serveur ?
 
 ***
 
-### 3. Que se passe-t-il si le formulaire n'est pas valide (données non conformes au type défini dans le modèle) ?
+> ### 3. Que se passe-t-il si le formulaire n'est pas valide (données non conformes au type défini dans le modèle) ?
 
 ***
 
-### 4. Quels sont les avantages d'utiliser un template pré-conçu par rapport à coder le HTML/CSS from scratch ?
+> ### 4. Quels sont les avantages d'utiliser un template pré-conçu par rapport à coder le HTML/CSS from scratch ?
 
 ***
 
-### 5. Comment Django gère-t-il les fichiers statiques en développement vs production ?
+> ### 5. Comment Django gère-t-il les fichiers statiques en développement vs production ?
 
 ***
 
-### 6. Pourquoi est-il important de placer les images dans le bon dossier ?
+> ### 6. Pourquoi est-il important de placer les images dans le bon dossier ?
 
 ***
 
