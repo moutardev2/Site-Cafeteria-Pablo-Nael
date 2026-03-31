@@ -1,2 +1,2 @@
 # cafeteria-django
-Architecture du site + base de donné pour projet de cafeteria
+Architecture du site + base de donnée pour projet de cafeteria
