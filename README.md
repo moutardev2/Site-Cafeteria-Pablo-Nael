@@ -18,146 +18,136 @@
 ## Sommaire
 
 - [1. Contexte du projet](#1-contexte-du-projet)
-- [3. Organisation du travail en binôme](#3-organisation-du-travail-en-binôme)
-- [4. Choix techniques globaux](#4-choix-techniques-globaux)
-- [5. Mise en place de l’environnement](#5-mise-en-place-de-lenvironnement)
-- [6. Versionnement et GitHub](#6-versionnement-et-github)
-- [7. Architecture du projet Django](#7-architecture-du-projet-django)
-- [8. Modélisation avec Django](#8-modélisation-avec-django)
-- [9. Interface d’administration](#9-interface-dadministration)
-- [10. Architecture MVT](#10-architecture-mvt)
-- [11. Gestion des vues et des URLs](#11-gestion-des-vues-et-des-urls)
-- [12. Templates et intégration des données](#12-templates-et-intégration-des-données)
-- [13. CRUD et gestion des formulaires](#13-crud-et-gestion-des-formulaires)
-- [14. Mise en forme et choix visuels](#14-mise-en-forme-et-choix-visuels)
-- [15. Gestion des fichiers statiques](#15-gestion-des-fichiers-statiques)
-- [16. Authentification et plugins Django](#16-authentification-et-plugins-django)
-- [17. Réseau : IP, LAN, localhost](#17-réseau--ip-lan-localhost)
-- [18. Difficultés rencontrées](#18-difficultés-rencontrées)
-- [19. Conclusion](#19-conclusion)
+- [2. Choix techniques globaux](#2-choix-techniques-globaux)
+- [3. Mise en place du projet](#3-mise-en-place-du-projet)
+- [4. Versionnement et GitHub](#4-versionnement-et-github)
+- [5. Architecture du projet Django](#5-architecture-du-projet-django)
+- [6. Modélisation avec Django](#6-modélisation-avec-django)
+- [7. Interface d’administration](#7-interface-dadministration)
+- [8. Architecture MVT](#8-architecture-mvt)
+- [9. Gestion des vues et des URLs](#9-gestion-des-vues-et-des-urls)
+- [10. Templates et intégration des données](#10-templates-et-intégration-des-données)
+- [11. CRUD et gestion des formulaires](#11-crud-et-gestion-des-formulaires)
+- [12. Mise en forme et choix visuels](#12-mise-en-forme-et-choix-visuels)
+- [13. Gestion des fichiers statiques](#13-gestion-des-fichiers-statiques)
+- [14. Authentification et plugins Django](#14-authentification-et-plugins-django)
+- [15. Réseau : IP, LAN, localhost](#15-réseau--ip-lan-localhost)
+- [16. Difficultés rencontrées](#16-difficultés-rencontrées)
+- [17. Conclusion](#17-conclusion)
 
 ---
 
 ## 1. Contexte du projet
 
 ### 1.1 Présentation générale
+
 ***
 
 ### 1.2 Problématique
+
 ***
 
 ### 1.3 Besoin auquel répond l’application
+
 ***
 
 ---
 
-## 2. Objectifs pédagogiques
+## 2. Choix techniques globaux
 
-### 2.1 Compétences techniques visées
+### 2.1 Choix de Django comme framework principal
+
 ***
 
-### 2.2 Objectifs liés à Django
+### 2.2 Choix de Bootstrap pour l’interface
+
 ***
 
-### 2.3 Objectifs liés au travail de développement
+### 2.3 Pourquoi nous avons conservé une structure simple et claire
+
 ***
 
----
+### 2.4 Pourquoi nous avons privilégié des solutions natives de Django
 
-## 3. Organisation du travail en binôme
-
-### 3.1 Répartition des tâches
-***
-
-### 3.2 Méthode de travail avec Pablo
-***
-
-### 3.3 Coordination et communication
-***
-
-### 3.4 Pourquoi nous avons choisi cette organisation
 ***
 
 ---
 
-## 4. Choix techniques globaux
+## 3. Mise en place du projet
 
-### 4.1 Pourquoi nous avons choisi Django
+### 3.1 Création du repository
+
 ***
 
-### 4.2 Pourquoi nous avons utilisé Bootstrap
+### 3.2 Initialisation du projet Django
+
 ***
 
-### 4.3 Pourquoi nous avons conservé une structure simple et claire
+### 3.3 Création de l’application principale
+
 ***
 
-### 4.4 Pourquoi nous avons privilégié des solutions natives de Django
+### 3.4 Premiers tests de lancement
+
 ***
 
----
+### 3.5 Choix faits dès le démarrage du projet
 
-## 5. Mise en place de l’environnement
-
-### 5.1 Création du repository
-***
-
-### 5.2 Environnement virtuel Python
-***
-
-### 5.3 Installation de Django
-***
-
-### 5.4 Initialisation du projet
-***
-
-### 5.5 Pourquoi nous avons isolé l’environnement avec `venv`
-***
-
-### 5.6 Pourquoi cette étape était importante dès le départ
 ***
 
 ---
 
-## 6. Versionnement et GitHub
+## 4. Versionnement et GitHub
 
-### 6.1 Création du dépôt GitHub
+### 4.1 Création du dépôt GitHub
+
 ***
 
-### 6.2 Utilisation de Git au fil du projet
+### 4.2 Utilisation de Git au fil du projet
+
 ***
 
-### 6.3 Sauvegardes régulières
+### 4.3 Sauvegardes régulières
+
 ***
 
-### 6.4 Travail sur plusieurs machines
+### 4.4 Travail sur plusieurs machines
+
 ***
 
-### 6.5 Utilisation de SSH
+### 4.5 Utilisation de SSH
+
 ***
 
-### 6.6 Pourquoi nous avons versionné de cette manière
+### 4.6 Pourquoi nous avons versionné de cette manière
+
 ***
 
 ---
 
-## 7. Architecture du projet Django
+## 5. Architecture du projet Django
 
-### 7.1 Arborescence générale
+### 5.1 Arborescence générale
+
 ***
 
-### 7.2 Rôle du dossier principal du projet
+### 5.2 Rôle du dossier principal du projet
+
 ***
 
-### 7.3 Rôle de l’application Django
+### 5.3 Rôle de l’application Django
+
 ***
 
-### 7.4 Pourquoi nous avons séparé le projet et l’application
+### 5.4 Pourquoi nous avons séparé le projet et l’application
+
 ***
 
-### 7.5 Structure des fichiers retenue
+### 5.5 Structure des fichiers retenue
+
 ***
 
-```bash
+~~~bash
 cafeteria-django/
 ├── cafeteria/
 ├── cafeteria_app/
@@ -166,34 +156,37 @@ cafeteria-django/
 ├── manage.py
 ├── README.md
 └── .gitignore
-```
-## 8. Modélisation avec Django
+~~~
 
-### 8.1 Traduction du diagramme en modèles Django
+---
 
-***
+## 6. Modélisation avec Django
 
-### 8.2 Modèle `Student`
-
-***
-
-### 8.3 Modèle `Product`
+### 6.1 Traduction du diagramme en modèles Django
 
 ***
 
-### 8.4 Modèle `Transaction`
+### 6.2 Modèle `Student`
 
 ***
 
-### 8.5 Pourquoi nous avons choisi ces champs
+### 6.3 Modèle `Product`
 
 ***
 
-### 8.6 Pourquoi nous avons ajouté certaines contraintes ou valeurs par défaut
+### 6.4 Modèle `Transaction`
 
 ***
 
-### 8.7 Extrait de `models.py`
+### 6.5 Pourquoi nous avons choisi ces champs
+
+***
+
+### 6.6 Pourquoi nous avons ajouté certaines contraintes ou valeurs par défaut
+
+***
+
+### 6.7 Extrait de `models.py`
 
 ***
 
@@ -212,21 +205,21 @@ class Transaction(models.Model):
 
 ---
 
-## 9. Interface d’administration
+## 7. Interface d’administration
 
-### 9.1 Mise en place de l’admin Django
-
-***
-
-### 9.2 Enregistrement des modèles
+### 7.1 Mise en place de l’admin Django
 
 ***
 
-### 9.3 Utilité de l’interface admin dans notre projet
+### 7.2 Enregistrement des modèles
 
 ***
 
-### 9.4 Pourquoi nous avons utilisé l’admin pour les premiers tests
+### 7.3 Utilité de l’interface admin dans notre projet
+
+***
+
+### 7.4 Pourquoi nous avons utilisé l’admin pour les premiers tests
 
 ***
 
@@ -241,53 +234,53 @@ admin.site.register(Transaction)
 
 ---
 
-## 10. Architecture MVT
+## 8. Architecture MVT
 
-### 10.1 Compréhension du pattern MVT
-
-***
-
-### 10.2 Rôle du Model
+### 8.1 Compréhension du pattern MVT
 
 ***
 
-### 10.3 Rôle de la View
+### 8.2 Rôle du Model
 
 ***
 
-### 10.4 Rôle du Template
+### 8.3 Rôle de la View
 
 ***
 
-### 10.5 Pourquoi cette architecture nous a aidés à mieux organiser le projet
+### 8.4 Rôle du Template
+
+***
+
+### 8.5 Pourquoi cette architecture nous a aidés à mieux organiser le projet
 
 ***
 
 ---
 
-## 11. Gestion des vues et des URLs
+## 9. Gestion des vues et des URLs
 
-### 11.1 Première vue réalisée
-
-***
-
-### 11.2 Liste des produits disponibles
+### 9.1 Première vue réalisée
 
 ***
 
-### 11.3 Configuration des routes
+### 9.2 Liste des produits disponibles
 
 ***
 
-### 11.4 Pourquoi nous avons choisi cette logique de navigation
+### 9.3 Configuration des routes
 
 ***
 
-### 11.5 Pourquoi nous avons nommé les URLs de cette manière
+### 9.4 Pourquoi nous avons choisi cette logique de navigation
 
 ***
 
-~~~pyhon
+### 9.5 Pourquoi nous avons nommé les URLs de cette manière
+
+***
+
+~~~python
 from django.urls import path
 from cafeteria_app import views
 
@@ -299,29 +292,29 @@ urlpatterns = [
 
 ---
 
-## 12. Templates et intégration des données
+## 10. Templates et intégration des données
 
-### 12.1 Principe des templates Django
-
-***
-
-### 12.2 Passage des données depuis la view
+### 10.1 Principe des templates Django
 
 ***
 
-### 12.3 Affichage dynamique avec les balises Django
+### 10.2 Passage des données depuis la view
 
 ***
 
-### 12.4 Utilisation des boucles, conditions et variables
+### 10.3 Affichage dynamique avec les balises Django
 
 ***
 
-### 12.5 Pourquoi nous avons utilisé un template de base `base.html`
+### 10.4 Utilisation des boucles, conditions et variables
 
 ***
 
-### 12.6 Pourquoi cette structure rend le projet plus maintenable
+### 10.5 Pourquoi nous avons utilisé un template de base `base.html`
+
+***
+
+### 10.6 Pourquoi cette structure rend le projet plus maintenable
 
 ***
 
@@ -335,37 +328,37 @@ urlpatterns = [
 
 ---
 
-## 13. CRUD et gestion des formulaires
+## 11. CRUD et gestion des formulaires
 
-### 13.1 Mise en place des opérations CRUD
-
-***
-
-### 13.2 Ajout d’un étudiant
+### 11.1 Mise en place des opérations CRUD
 
 ***
 
-### 13.3 Modification d’un étudiant
+### 11.2 Ajout d’un étudiant
 
 ***
 
-### 13.4 Suppression d’un étudiant
+### 11.3 Modification d’un étudiant
 
 ***
 
-### 13.5 Gestion des produits et transactions
+### 11.4 Suppression d’un étudiant
 
 ***
 
-### 13.6 Utilisation de `ModelForm`
+### 11.5 Gestion des produits et transactions
 
 ***
 
-### 13.7 Pourquoi nous avons utilisé `ModelForm` plutôt qu’un formulaire HTML manuel
+### 11.6 Utilisation de `ModelForm`
 
 ***
 
-### 13.8 Exemple de structure
+### 11.7 Pourquoi nous avons utilisé `ModelForm` plutôt qu’un formulaire HTML manuel
+
+***
+
+### 11.8 Exemple de structure
 
 ***
 
@@ -381,57 +374,57 @@ class StudentForm(forms.ModelForm):
 
 ---
 
-## 14. Mise en forme et choix visuels
+## 12. Mise en forme et choix visuels
 
-### 14.1 Choix du style général
-
-***
-
-### 14.2 Intégration de Bootstrap
+### 12.1 Choix du style général
 
 ***
 
-### 14.3 Organisation de l’interface
+### 12.2 Intégration de Bootstrap
 
 ***
 
-### 14.4 Lisibilité et expérience utilisateur
+### 12.3 Organisation de l’interface
 
 ***
 
-### 14.5 Responsive design
+### 12.4 Lisibilité et expérience utilisateur
 
 ***
 
-### 14.6 Pourquoi nous avons fait cette mise en forme
+### 12.5 Responsive design
 
 ***
 
-### 14.7 Pourquoi nous avons privilégié la clarté plutôt que la complexité visuelle
+### 12.6 Pourquoi nous avons fait cette mise en forme
+
+***
+
+### 12.7 Pourquoi nous avons privilégié la clarté plutôt que la complexité visuelle
 
 ***
 
 ---
 
-## 15. Gestion des fichiers statiques
+## 13. Gestion des fichiers statiques
 
-### 15.1 Organisation des fichiers CSS, JS et images
-
-***
-
-### 15.2 Utilisation du dossier `static/`
+### 13.1 Organisation des fichiers CSS, JS et images
 
 ***
 
-### 15.3 Ajout éventuel d’images et d’un logo
+### 13.2 Utilisation du dossier `static/`
 
 ***
 
-### 15.4 Pourquoi nous avons séparé les fichiers statiques du reste du projet
+### 13.3 Ajout éventuel d’images et d’un logo
 
 ***
 
-### 15.5 Pourquoi cette organisation est importante en développement et en production
+### 13.4 Pourquoi nous avons séparé les fichiers statiques du reste du projet
+
+***
+
+### 13.5 Comment cette organisation facilite la maintenance du projet
 
 ***
 
@@ -443,99 +436,99 @@ class StudentForm(forms.ModelForm):
 
 ---
 
-## 16. Authentification et plugins Django
+## 14. Authentification et plugins Django
 
-### 16.1 Système d’authentification Django
-
-***
-
-### 16.2 Protection des vues
+### 14.1 Système d’authentification Django
 
 ***
 
-### 16.3 Intégration possible du CAS ENSEA
+### 14.2 Protection des vues
 
 ***
 
-### 16.4 Plugin `django-cas-ng`
+### 14.3 Intégration possible du CAS ENSEA
 
 ***
 
-### 16.5 Plugin `django-import-export`
+### 14.4 Plugin `django-cas-ng`
 
 ***
 
-### 16.6 Pourquoi ces plugins sont pertinents dans le cadre du projet
+### 14.5 Plugin `django-import-export`
 
 ***
 
-### 16.7 Pourquoi nous avons choisi de rester cohérents avec les consignes du TP
+### 14.6 Intérêt de ces plugins dans le cadre du projet
 
 ***
 
----
-
-## 17. Réseau : IP, LAN, localhost
-
-### 17.1 Compréhension de `localhost`
-
-***
-
-### 17.2 Adresse `127.0.0.1`
-
-***
-
-### 17.3 Notion de LAN
-
-***
-
-### 17.4 Accès local vs accès réseau
-
-***
-
-### 17.5 Pourquoi ces notions sont importantes pour un projet web Django
+### 14.7 Ce que nous avons choisi d’intégrer ou non, et pourquoi
 
 ***
 
 ---
 
-## 18. Difficultés rencontrées
+## 15. Réseau : IP, LAN, localhost
 
-### 18.1 Problèmes techniques rencontrés
-
-***
-
-### 18.2 Difficultés de compréhension
+### 15.1 Compréhension de `localhost`
 
 ***
 
-### 18.3 Solutions apportées
+### 15.2 Adresse `127.0.0.1`
 
 ***
 
-### 18.4 Ce que nous aurions pu améliorer
+### 15.3 Notion de LAN
 
 ***
 
----
-
-## 19. Conclusion
-
-### 19.1 Bilan général
+### 15.4 Accès local vs accès réseau
 
 ***
 
-### 19.2 Ce que ce projet nous a apporté
-
-***
-
-### 19.3 Perspectives d’amélioration
+### 15.5 En quoi ces notions nous ont aidés à mieux comprendre le fonctionnement du projet
 
 ***
 
 ---
 
-##  Annexes
+## 16. Difficultés rencontrées
+
+### 16.1 Problèmes techniques rencontrés
+
+***
+
+### 16.2 Difficultés de compréhension
+
+***
+
+### 16.3 Solutions apportées
+
+***
+
+### 16.4 Ce que nous aurions pu améliorer
+
+***
+
+---
+
+## 17. Conclusion
+
+### 17.1 Bilan général
+
+***
+
+### 17.2 Ce que ce projet nous a apporté
+
+***
+
+### 17.3 Perspectives d’amélioration
+
+***
+
+---
+
+## Annexes
 
 ### A. Commandes utiles
 
