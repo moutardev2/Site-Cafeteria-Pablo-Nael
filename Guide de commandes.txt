@@ -14,3 +14,8 @@ nom du super indentifiant : pablo
 mail super user : pacantini16@gmail.com
 mdp super user : nael2006
 
+COMMANDES RÉSEAU (Étape 8) ---
+- Voir les adresses IP et masques : ipconfig /all
+- Voir la table de routage (passerelle) : route print -4
+
+

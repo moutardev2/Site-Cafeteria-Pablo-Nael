@@ -1,0 +1,42 @@
+Identification des paramètres :
+
+pc fixe (ethernet)
+Adresse Ip  : 192.168.0.121
+Masque de sous-réseau :  255.255.255.0 (ce qui correspond à un CIDR /24)
+Adresse réseau : 192.168.0.0 (Avec un masque /24, les 3 premiers octets définissent le réseau, le dernier est réservé aux machines et mis à 0)
+Adresse de broadcast : 192.168.0.255
+Passerelle par défaut (Gateway) : 192.168.0.1
+Nombre de machines hautes : (2**(32-24))-2 = 254 machines hotes possibles
+IPv6 : fe80::be24:11ff:fef8:c2c1/64
+
+
+pc portable (wifi):
+
+IPv4 : 10.10.27.124
+masque sous réseau :  255.255.252.0 (8bit ; 8bit ; 6bit; 0bit = 8+8+6+0 = /22)
+Passerelle par défaut : 10.10.27.250
+nbr de mancines possibles hotes : (2**(32-22))-2 = 1022
+Adresse Réseau : 10.10.24.0
+Adresse de Broadcast : 10.10.27.255
+Passerelle (Gateway) : 10.10.27.250
+IPv6 : fe80::2a3:2f04:9073:a60f%5
+
+1. Protocole d'adressage automatique
+
+Le protocole utilisé est le DHCP.
+Il permet à un serveur de distribuer automatiquement une configuration réseau (IP, masque, passerelle) à chaque appareil qui se connecte.
+
+2. Pourquoi un masque /19 au lieu de /24 ?
+
+Un masque /19 permet de créer un réseau beaucoup plus grand.
+Alors qu'un /24 est limité à 254 machines, un /19 permet d'en connecter 8 190, ce qui est indispensable pour le Wi-Fi d'un grand campus.
+
+3. Différence entre IPv4 et IPv6
+
+L'IPv4 utilise des adresses sur 32 bits (ex: 10.10.27.124) et manque aujourd'hui de places disponibles.
+L'IPv6 utilise 128 bits (ex: fe80::2a3...), offrant un nombre d'adresses quasi infini et une configuration plus moderne.
+
+4. Communication directe entre Ethernet et Eduroam ?
+
+Non, la communication directe est impossible car ces deux réseaux sont logiquement séparés (sous-réseaux différents).
+Pour qu'ils communiquent, les données doivent obligatoirement passer par un routeur (la passerelle) qui fait le lien entre eux.
